@@ -1,0 +1,30 @@
+{
+  "name": "emzweb",
+  "version": "0.0.1",
+  "authors": [
+    "marek1 <cyclingfellas@gmail.com>"
+  ],
+  "description": "emzweb website",
+  "main": "index.html",
+  "keywords": [
+    "frontend"
+  ],
+  "license": "MIT",
+  "homepage": "www.emzweb.de",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.0.0",
+    "bootstrap": "~3.0.0",
+    "jquery": "~2.0.3",
+    "requirejs": "~2.1.8",
+    "underscore": "~1.5.2",
+    "underscore-amd": "~1.5.2",
+    "backbone-amd": "~1.0.0"
+  }
+}

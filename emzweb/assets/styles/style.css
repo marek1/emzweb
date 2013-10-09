@@ -1,0 +1,521 @@
+/*
+ * Reset
+ */
+/* CSS reset. Based on HTML5 boilerplate reset http://html5boilerplate.com/*/
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	display: block;
+}
+audio[controls], canvas, video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.4;
+}
+body, button, input, select, textarea {
+	font-family: sans-serif;
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover, a:active {
+	outline: 0;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b, strong {
+	font-weight: bold;
+}
+blockquote {
+	margin: 1em 40px;
+}
+dfn {
+	font-style: italic;
+}
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+ins {
+	background: #ff9;
+	color: #000;
+	text-decoration: none;
+}
+mark {
+	background: #ff0;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+pre, code, kbd, samp {
+	font-family: monospace, monospace;
+	_font-family: 'courier new', monospace;
+	font-size: 1em;
+}
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+q {
+	quotes: none;
+}
+q:before, q:after {
+	content: "";
+	content: none;
+}
+small {
+	font-size: 85%;
+}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+ul, ol {
+	margin: 1em 0;
+	padding: 0 0 0 2em;
+}
+dd {
+	margin: 0 0 0 40px;
+}
+nav ul, nav ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+figure {
+	margin: 0;
+}
+form {
+	margin: 0;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+legend {
+	border: 0;
+	*margin-left: -7px;
+	padding: 0;
+}
+label {
+	cursor: pointer;
+}
+button, input, select, textarea {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+	*vertical-align: middle;
+}
+button, input {
+	line-height: normal;
+	*overflow: visible;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+}
+input[type="search"] {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+input:valid, textarea:valid {
+}
+input:invalid, textarea:invalid {
+	background-color: #f0dddd;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+/* End CSS reset */
+
+/*
+ * Skin
+ */
+body {
+	font-family: arial, sans-serif;
+	color: #333;
+}
+a, a:visited {
+	color: #999;
+}
+a:hover {
+	color: #ea0000;
+}
+input,
+textarea{
+	width:100%;
+	max-width:300px;
+}
+
+ul li, ol li {
+	padding: 0 0 0.4em 0;
+}
+
+.container {
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.header {
+	margin: 50px 0 3em 0;
+	padding: 2em 2% 0 2%;
+}
+
+.logo {
+	float: left;
+	display: inline-block;
+	padding: 0 0 1em;
+	font-size: 18px;
+	color: #ea0000;
+}
+
+.menu_main {
+	width: 50%;
+	float: right;
+	text-align: right;
+	margin: 0.3em 0 0 0;
+}
+.menu_main li {
+	display: inline-block;
+	margin: 0 0 0 7px;
+}
+
+.info {
+	padding: 2%;
+}
+
+.hero {
+}
+.hero h1 {
+	font-size: 26px;
+	font-family: georgia, serif;
+	font-style: italic;
+	color: #508e1f;
+}
+.article {
+}
+
+.footer {
+	border-top: 1px solid #666;
+	padding: 2em 2% 3em 2%;
+	color: #666;
+}
+
+.copyright {
+	width: 49%;
+	float: left;
+	font-family: georgia, serif;
+	font-style: italic;
+}
+.menu_bottom {
+	width: 50%;
+	float: right;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+.menu_bottom li {
+	display: inline-block;
+	margin: 0 0 0 7px;
+}
+.menu_bottom li.active, .menu_bottom li.active a {
+	color: #666;
+	text-decoration: none;
+	cursor: default;
+}
+
+h1, h2 {
+	font-weight: normal;
+	color: #000;
+}
+h1 {
+	font-size: 22px;
+}
+.form label {
+	display: inline-block;
+	padding: 0 0 4px 0;
+}
+
+a.button, .button {
+	margin-top: 10px;
+	border: 1px solid #2a520a;
+	text-align: center;
+	text-decoration: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: #000 0px 0px 1px;
+	-moz-box-shadow: #000 0px 0px 1px;
+	box-shadow: #000 0px 0px 1px;
+	background: #508e1f;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#508e1f), to(#6bc127));
+	background: -webkit-linear-gradient(#508e1f, #6bc127);
+	background: -moz-linear-gradient(#508e1f, #6bc127);
+	background: -ms-linear-gradient(#508e1f, #6bc127);
+	background: -o-linear-gradient(#508e1f, #6bc127);
+	background: linear-gradient(#508e1f, #6bc127);
+	color: #fff;
+	padding: 12px 20px;
+	font-family: verdana, sans-serif;
+	text-shadow: 1px 1px 1px #2a520a;
+	display: inline-block;
+}
+a.button:hover, .button:hover {
+	color: #fff;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6bc127), to(#508e1f));
+	background: -webkit-linear-gradient(#6bc127, #508e1f);
+	background: -moz-linear-gradient(#6bc127, #508e1f);
+	background: -ms-linear-gradient(#6bc127, #508e1f);
+	background: -o-linear-gradient(#6bc127, #508e1f);
+	background: linear-gradient(#6bc127, #508e1f);
+}
+a.button:active, .button:active {
+	color: #FFFFE0;
+	text-shadow: 1px 1px 1px #508e1f;
+	-webkit-box-shadow: #6bc127 0px -3px 3px inset;
+	-moz-box-shadow: #6bc127 0px -3px 3px inset;
+	box-shadow: #6bc127 0px -3px 3px inset;
+}
+#impressum{
+	display:none;
+}
+.error{
+	border:2px solid red;
+}
+.hide{
+	display:none;
+}
+.success {
+  border:1px solid #399f16;
+  color:#fff;
+  background:#399f16;
+  padding:8px 14px;
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  border-radius:8px;
+}
+
+/* Columns
+ -------
+ .col_33 | .col_33 | .col_33
+ .clearfix
+ -------
+ .col_75 | .col_25
+ .clearfix
+ -------
+ .col_66 | .col_33
+ .clearfix
+ -------
+ .col_50 | .col_50
+ .clearfix
+ -------
+ .col_100
+ -------
+ */
+.col_25 {
+	width: 23%;
+	margin: 0 2% 0 0;
+	float: left;
+}
+.col_33 {
+	width: 31%;
+	margin: 0 2% 0 0;
+	float: left;
+}
+.col_50 {
+	width: 48%;
+	margin: 0 2% 0 0;
+	float: left;
+}
+.col_66 {
+	width: 64%;
+	margin: 0 2% 0 0;
+	float: left;
+}
+.col_75 {
+	width: 73%;
+	margin: 0 2% 0 0;
+	float: left;
+}
+.col_100 {
+	width: 98%;
+	margin: 0 2% 0 0;
+}
+
+.col_25.wrap {
+	width: 25%;
+	margin: 0;
+}
+.col_33.wrap {
+	width: 33%;
+	margin: 0;
+}
+.col_50.wrap {
+	width: 50%;
+	margin: 0;
+}
+.col_66.wrap {
+	width: 66%;
+	margin: 0;
+}
+.col_75.wrap {
+	width: 75%;
+	margin: 0;
+}
+.col_100.wrap {
+	width: 100%;
+	margin: 0;
+}
+/* End columns */
+
+/* Helper classes */
+.center {
+	text-align: center;
+}
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
+
+.img_floatleft {
+	float: left;
+	margin: 0 10px 5px 0;
+}
+.img_floatright {
+	float: right;
+	margin: 0 0 5px 10px;
+}
+
+.img {
+	max-width: 100%;
+}
+/* End helper classes */
+
+@media only screen and (max-width: 480px) {/* Smartphone */
+	.header {
+		margin-bottom: 0;
+	}
+
+	.logo {
+		display: block;
+		float: none;
+		text-align: center;
+	}
+
+	.menu_main {
+		width: 100%;
+		text-align: center;
+		float: none;
+		padding: 0;
+		margin: 1em 0 0 0;
+	}
+
+	.menu_main a {
+		display: inline-block;
+		padding: 7px;
+	}
+
+	.copyright {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+
+	.footer {
+		padding-bottom: 0;
+	}
+
+	.menu_bottom {
+		width: 100%;
+		float: none;
+		text-align: center;
+		margin: 1em 0 0 0;
+		padding: 0;
+	}
+	.menu_bottom a {
+		display: inline-block;
+		padding: 6px;
+	}
+
+	.form textarea {
+		width: 100%;
+	}
+	.form label {
+		padding: 10px 0 8px 0;
+	}
+
+}
+
+@media only screen and (max-width: 768px) {/* Tablet */
+	body {
+		font-size: 80%;
+	}
+	.col_25, .col_33, .col_66, .col_50, .col_75 {
+		width: 98%;
+		float: none;
+	}
+	.form label {
+		padding: 10px 0 8px 0;
+	}
+
+}
+
