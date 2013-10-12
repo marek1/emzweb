@@ -6,25 +6,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 	display: block;
 }
 article{
-	margin-left: -20px;
-	border-left: 40px solid white;
-	padding : 10px 50px 10px 10px;
-	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease;
+	padding : 0;
 }
 article:target{
-	-webkit-transform:translateX(20px);
-	transform:translateX(20px);
-	-webkit-animation: highlight 1s ease;
-	animation: highlight 1s ease;
+   -webkit-animation: yellow-fade 2s ease-in 1;
+   animation: yellow-fade 2s ease-in 1;
 }
-@-webkit-keyframes highlight{
-	0% { border-left-color: red; }
-	100% { border-left-color: white; }
+@-webkit-keyframes yellow-fade {   
+   0% {background: yellow;}
+   100% {background: none;}
 }
-@keyframes highlight{
-	0% { border-left-color: red; }
-	100% { border-left-color: white; }
+
+@keyframes yellow-fade {
+   0% {background: yellow;}
+   100% {background: none;}
 }
 
 audio[controls], canvas, video {
@@ -38,7 +33,8 @@ html {
 	-ms-text-size-adjust: 100%;
 }
 body {
-	margin: 0;
+	max-width:1280px;
+	margin: 0 auto;
 	font-size: 14px;
 	line-height: 1.4;
 }
@@ -239,7 +235,6 @@ ul li, ol li {
 	margin: 50px 0 3em 0;
 	padding: 2em 2% 0 2%;
 }
-
 .logo {
 	float: left;
 	display: inline-block;
@@ -258,7 +253,14 @@ ul li, ol li {
 	display: inline-block;
 	margin: 0 0 0 7px;
 }
-
+#hero_image{
+	width:96%;
+	margin: 0 auto; 
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
+}
 .info {
 	padding: 2%;
 }
@@ -482,7 +484,10 @@ a.button:active, .button:active {
 		float: none;
 		text-align: center;
 	}
-
+	#hero_image{
+		height:179px;
+		background:url('../images/emzweb_s.png') no-repeat center center;
+	}
 	.menu_main {
 		width: 100%;
 		text-align: center;
@@ -541,3 +546,19 @@ a.button:active, .button:active {
 
 }
 
+@media all
+and (min-width: 401px)
+and (max-width: 768px) {/* Tablet */
+	#hero_image{
+		height:287px;
+		background:url('../images/emzweb_m.png') no-repeat center center;
+	}
+}
+
+@media all
+and (min-width: 769px) {/* Desktop */
+	#hero_image{
+		height:478px;
+		background:url('../images/emzweb_l.png') no-repeat center center;
+	}
+}
