@@ -13,7 +13,7 @@
 			var email = doc.getElementById('email').value;
 			var message = doc.getElementById('textarea').value;
 
-			var post_url = "http://emzweb.de/message";
+			var post_url = "message";
 
 			var post_data = {
 				'name' : name,
@@ -21,12 +21,7 @@
 				'message' : message
 			};
 
-			if (ajaxFunction(post_url, post_data)) {
-				var form_node = doc.getElementById('form');
-				form_node.parentNode.removeChild(form_node);
-				var success_node = doc.getElementsByClassName('success');
-				removeClass(success_node[0], 'hide');
-			}
+			ajaxFunction(post_url, post_data);
 
 		}
 	};
@@ -57,7 +52,7 @@
 		ajaxRequest.open("POST", url, true);
 
 		ajaxRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
+		
 		// Create a function that will receive data sent from the server
 		ajaxRequest.onreadystatechange = function() {
 			if (ajaxRequest.readyState == 4) {
@@ -72,6 +67,14 @@
 		 * etc.
 		 */
 		ajaxRequest.send('data=' + string);
+		
+		/*
+		 * show success message
+		 */
+		var form_node = doc.getElementById('form');
+		form_node.parentNode.removeChild(form_node);
+		var success_node = doc.getElementsByClassName('success');
+		removeClass(success_node[0], 'hide');
 	}
 
 	function getHttpRequest() {
@@ -116,7 +119,6 @@
 
 		var isFormValid = true;
 		doc.onkeydown = function(event) {
-			console.log('event.target : ',event.target);
 			if (hasClass(event.target, 'required') || hasClass(event.target, 'email')) {
 				removeClass(event.target, 'error');
 			}
