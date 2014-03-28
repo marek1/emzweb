@@ -1,0 +1,58 @@
+.label_next (@index) when (@index < @number_of_slides) {
+    @next: @index + 1;
+    #slide@{index}:checked ~ #slides #controls label:nth-child(@{next}) {
+        background-image: url('../images/sprites.png');
+        background-position: -50px 0;
+        float: right;
+        display: block;
+    }
+}
+
+.label_next (@index) when (@index = @number_of_slides) {
+    #slide@{index}:checked ~ #slides #controls label:nth-child(1) {
+        background-image: url('../images/sprites.png');
+        background-position: -50px 0;
+        float: right;
+        display: block;
+    }
+}
+
+.label_prev (@index) when (@index > 1) {
+    @prev: @index - 1;
+    #slide@{index}:checked ~ #slides #controls label:nth-child(@{prev}) {
+        background-image: url('../images/sprites.png');
+		background-position: 0 0;
+        float: left;
+        display: block;
+    }
+}
+
+.label_prev (@index) when (@index = 1) {
+    #slide@{index}:checked ~ #slides #controls label:nth-child(@{number_of_slides}) {
+        background-image: url('../images/sprites.png');
+		background-position: 0 0;
+		float: left;
+        display: block;
+    }
+}
+
+.loopSlides (@index: 1) when (@index <= @number_of_slides) {
+    #slide@{index}:checked {
+        & ~ #slides .inner {
+            margin-left: (-100% * (@index - 1));
+        }
+        & ~ #active label:nth-child(@{index}) {
+            background: #333;
+            border-color: #333 !important;
+        }
+        & ~ #slides article:nth-child(@{index}) .info {
+            opacity: 1;
+            .transition(opacity, 0.2s, ease-out, 0.4s);
+        }
+    }
+
+    .label_next(@index);
+    .label_prev(@index);
+
+    .loopSlides(@index + 1);
+}

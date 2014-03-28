@@ -1,0 +1,60 @@
+
+.box-sizing (@sizing: border-box) {
+    -ms-box-sizing: @sizing;
+    -webkit-box-sizing: @sizing;
+    -moz-box-sizing: @sizing;
+    box-sizing: @sizing;
+}
+
+.rounded (@radius: 2px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.box-shadow (@arguments) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+.transition (@property: all, @duration: 1s, @easing: ease-out, @delay: 0s) {
+    -webkit-transition: @property @duration @easing @delay;
+    -moz-transition: @property @duration @easing @delay;
+    -ms-transition: @property @duration @easing @delay;
+    -o-transition: @property @duration @easing @delay;
+    transition: @property @duration @easing @delay;
+}
+
+.rect (@height: inherit, @width: inherit) {
+    height: @height;
+    width: @width;
+}
+
+.quad (@length) {
+    .rect(@length, @length);
+}
+
+.rotate (@degrees: 180deg) {
+    -webkit-transform: rotate(@degrees);
+    -moz-transform: rotate(@degrees);
+    -ms-transform: rotate(@degrees);
+    -o-transform: rotate(@degrees);
+    transform: rotate(@degrees);
+}
+
+.scale (@factor) {
+    -webkit-transform: scale(@factor);
+    -moz-transform: scale(@factor);
+    -ms-transform: scale(@factor);
+    -o-transform: scale(@factor);
+    transform: scale(@factor);
+}
+
+.scale_and_rotate (@factor, @degrees: 180deg) {
+    -webkit-transform: rotate(@degrees) scale(@factor);
+    -moz-transform: rotate(@degrees) scale(@factor);
+    -ms-transform: rotate(@degrees) scale(@factor);
+    -o-transform: rotate(@degrees) scale(@factor);
+    transform: rotate(@degrees) scale(@factor);
+}
