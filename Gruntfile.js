@@ -64,7 +64,21 @@ module.exports = function(grunt) {
 				files : ['assets/scripts/*.js'],
 				tasks : ['uglify']
 			}
-		}
+		},
+        connect: {
+            server: {
+                options: {
+                    port: 8000,
+                    hostname: '*',
+                    onCreateServer: function(server, connect, options) {
+                        var io = require('socket.io').listen(server);
+                        io.sockets.on('connection', function(socket) {
+                            // do something with socket
+                        });
+                    }
+                }
+            }
+        }
 	});
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -72,5 +86,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.registerTask('default', ['less', 'concat', 'cssmin', 'uglify', 'watch']);
+    grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.registerTask('default', ['less', 'concat', 'cssmin', 'uglify', 'connect', 'watch']);
 };
